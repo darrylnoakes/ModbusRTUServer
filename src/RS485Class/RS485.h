@@ -40,8 +40,8 @@ class RS485Class : public Stream {
   public:
     RS485Class(HardwareSerial& hwSerial, int txPin, int dePin, int rePin);
 
-    virtual void begin(unsigned long baudrate);
-    virtual void begin(unsigned long baudrate, uint16_t config);
+    virtual void begin(long baudrate);
+    virtual void begin(long baudrate, uint16_t config);
     virtual void end();
     virtual int available();
     virtual int peek();
@@ -68,7 +68,7 @@ class RS485Class : public Stream {
     int _rePin;
 
     bool _transmisionBegun;
-    unsigned long _baudrate;
+    long _baudrate;
     uint16_t _config;
 };
 
