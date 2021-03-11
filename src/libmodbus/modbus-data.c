@@ -67,7 +67,7 @@ void modbus_set_bits_from_bytes(uint8_t *dest, int idx, unsigned int nb_bits,
     int shift = 0;
 
     for (i = idx; i < idx + nb_bits; i++) {
-        dest[i] = tab_byte[(i - idx) / 8] & (1 << shift) ? 1 : 0;
+        dest[i] = (tab_byte[(i - idx) / 8] & (1 << shift)) ? 1 : 0;
         /* gcc doesn't like: shift = (++shift) % 8; */
         shift++;
         shift %= 8;

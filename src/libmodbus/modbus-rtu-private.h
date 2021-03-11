@@ -14,7 +14,7 @@
 #include "stdint.h"
 #endif
 
-#include "ArduinoRS485ClassMod/ArduinoRS485ClassMod.h"
+#include "RS485Class/RS485Class.h"
 
 #define _MODBUS_RTU_HEADER_LENGTH      1
 #define _MODBUS_RTU_PRESET_REQ_LENGTH  6
