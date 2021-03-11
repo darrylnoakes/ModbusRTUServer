@@ -16,7 +16,6 @@ ModbusRTUServerClass::ModbusRTUServerClass(
     uint8_t receiver_enable_pin) :
 
                                    RS485_{RS485Class(hwSerial, tx_pin, driver_enable_pin, receiver_enable_pin)},
-
                                    mb_(NULL)
 {
   memset(&mbMapping_, 0x00, sizeof(mbMapping_));
@@ -58,7 +57,7 @@ ModbusRTUServerClass::~ModbusRTUServerClass()
 
 int ModbusRTUServerClass::begin(int id, unsigned long baudrate, uint16_t config)
 {
-  // Test is kind of redundant, since `modbusBegin` won't return non-true, but that might change, so I'll leave here.
+  // This test is kind of redundant, since `modbusBegin` won't return non-true, but that might change, so I'll leave here.
   if (!modbusBegin(id, baudrate, config))
   {
     return 0;
