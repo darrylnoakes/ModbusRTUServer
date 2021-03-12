@@ -10,7 +10,7 @@
 
 #include "modbus.h"
 
-#include "ArduinoRS485ClassMod/ArduinoRS485ClassMod.h"
+#include "RS485Class/RS485Class.h"
 
 MODBUS_BEGIN_DECLS
 

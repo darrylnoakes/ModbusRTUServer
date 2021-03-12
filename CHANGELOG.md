@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - In `RS485Class`:
     `_baudrate` was not initialized in the constructor. The `begin` functions set it, but `sendBreak` and `sendBreakMicroseconds` did not. Calling them without calling `begin` before would cause the `HardwareSerial` passed in to the constructor to have its `begin` function called with a garbage baudrate. `_baudrate` is now initialized to `-1`, and `begin`, `sendBreak`, and `sendBreakMicroseconds` do nothing if the baudrate is less than `0`.
 
-- Changed `#include` in `libmodbus/modbus-rtu-private.h` to the new path for `RS485Class`.
+- Changed `#include`s in `libmodbus` to the new path for `RS485Class`.
 
 - Added parenthesis to clarify operator precedence:
     This:
