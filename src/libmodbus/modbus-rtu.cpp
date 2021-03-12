@@ -15,8 +15,6 @@
 #endif
 #include <assert.h>
 
-#include "ArduinoRS485ClassMod/ArduinoRS485ClassMod.h"
-
 #ifndef DEBUG
 #define printf(...) {}
 #define fprintf(...) {}
