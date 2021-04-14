@@ -11,16 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - The internal library `ArduinoRS485ClassMod` was renamed to `RS485Class`.
 
-- In `RS485Class`:
-    All baudrate variables and parameters are now `long` instead of `unsigned long`.
-    This is because `HardwareSerial.begin` only takes a `long` for baudrate.
+- Changed `#include`s in `libmodbus` to the new path for `RS485Class`.
 
 ## Fixed
 
 - In `RS485Class`:
-    `_baudrate` was not initialized in the constructor. The `begin` functions set it, but `sendBreak` and `sendBreakMicroseconds` did not. Calling them without calling `begin` before would cause the `HardwareSerial` passed in to the constructor to have its `begin` function called with a garbage baudrate. `_baudrate` is now initialized to `-1`, and `begin`, `sendBreak`, and `sendBreakMicroseconds` do nothing if the baudrate is less than `0`.
-
-- Changed `#include`s in `libmodbus` to the new path for `RS485Class`.
+    `_baudrate` was not initialized in the constructor. The `begin` functions sets it, but `sendBreak` and
+    `sendBreakMicroseconds` did detect wheter it was set or not. Calling them without calling `begin` before would cause the
+    `HardwareSerial` passed in to the constructor to have its `begin` function called with a garbage baudrate. `_baudrate` is
+    now initialized to `-1`, and `sendBreak` and `sendBreakMicroseconds` do nothing if the baudrate is less than `0`.
 
 - Added parenthesis to clarify operator precedence:
     This:

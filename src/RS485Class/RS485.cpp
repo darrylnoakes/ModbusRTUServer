@@ -29,12 +29,12 @@ RS485Class::RS485Class(HardwareSerial& hwSerial, int txPin, int dePin, int rePin
 {
 }
 
-void RS485Class::begin(long baudrate)
+void RS485Class::begin(unsigned long baudrate)
 {
   begin(baudrate, SERIAL_8N1);
 }
 
-void RS485Class::begin(long baudrate, uint16_t config)
+void RS485Class::begin(unsigned long baudrate, uint16_t config)
 {
   if (baudrate >= 0) {
     _baudrate = baudrate;
