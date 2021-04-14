@@ -16,10 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Fixed
 
 - In `RS485Class`:
-    `_baudrate` was not initialized in the constructor. The `begin` functions sets it, but `sendBreak` and
-    `sendBreakMicroseconds` did detect wheter it was set or not. Calling them without calling `begin` before would cause the
-    `HardwareSerial` passed in to the constructor to have its `begin` function called with a garbage baudrate. `_baudrate` is
-    now initialized to `-1`, and `sendBreak` and `sendBreakMicroseconds` do nothing if the baudrate is less than `0`.
+    `_baudrate` was not initialized in the constructor. The `begin` functions sets it,
+    but `sendBreak` and `sendBreakMicroseconds` did not detect whether it was set or not.
+    Calling them without calling `begin` before would cause the `HardwareSerial` passed
+    in to the constructor to have its `begin` function called with a garbage baudrate.
+    `_baudrate` is now initialized to `-1`, and `sendBreak` and `sendBreakMicroseconds`
+    do nothing if the baudrate is less than `0`.
 
 - Added parenthesis to clarify operator precedence:
     This:
