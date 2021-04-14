@@ -144,7 +144,7 @@ void RS485Class::noReceive()
 
 void RS485Class::sendBreak(unsigned int duration)
 {
-  if (baudrate >= 0) {
+  if (_baudrate >= 0) {
     _serial->flush();
     _serial->end();
     pinMode(_txPin, OUTPUT);
@@ -156,7 +156,7 @@ void RS485Class::sendBreak(unsigned int duration)
 
 void RS485Class::sendBreakMicroseconds(unsigned int duration)
 {
-  if (baudrate >= 0) {
+  if (_baudrate >= 0) {
     _serial->flush();
     _serial->end();
     pinMode(_txPin, OUTPUT);
