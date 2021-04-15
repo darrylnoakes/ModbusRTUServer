@@ -67,6 +67,7 @@ class RS485Class : public Stream {
     int _dePin;
     int _rePin;
 
+    bool _haveInit;
     bool _transmisionBegun;
     unsigned long _baudrate;
     uint16_t _config;
