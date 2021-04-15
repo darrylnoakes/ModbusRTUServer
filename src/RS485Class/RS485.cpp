@@ -26,7 +26,7 @@ RS485Class::RS485Class(HardwareSerial& hwSerial, int txPin, int dePin, int rePin
   _rePin(rePin),
   _haveInit(false),
   _transmisionBegun(false),
-  _baudrate(0),
+  _baudrate(0)
 {
 }
 
