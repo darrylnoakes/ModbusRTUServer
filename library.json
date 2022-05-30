@@ -1,9 +1,18 @@
 {
-  "name": "ModbusRTUServerClass",
+  "name": "ModbusRTUServer",
   "version": "0.0.0",
-  "license": "LGPL-3.0+",
+  "license": "LGPL-3.0-or-later",
   "keywords": "communication, serial, RS485, modbus",
-  "description": "Based on ArduinoModbus, this library provides a stripped down and optimized Modbus library that provides more functionality with a smaller compiled code size than ArduinoModbus.",
+  "description": "Based on ArduinoModbus, this library provides a stripped down and optimized Modbus server library that provides more functionality with a smaller compiled code size than ArduinoModbus.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darrylnoakes/ModbusRTUServer.git"
+  },
+  "authors": {
+    "name": "Darryl Noakes",
+    "email": "darryl.noakes@gmail.com"
+  },
   "frameworks": "arduino",
-  "platforms": "*"
+  "platforms": "*",
+  "headers": "ModbusRTUServer.hpp"
 }
