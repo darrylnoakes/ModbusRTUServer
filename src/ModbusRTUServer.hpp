@@ -1,5 +1,5 @@
 /*
-  This file is part of the ArduinoRS485 library.
+  This file is part of the ModbusRTUServer library.
 
   Copyright (c) 2018 Arduino SA. All rights reserved.
   Copyright (c) 2022 Darryl Noakes <darryl.noakes@gmail.com>
@@ -8,7 +8,7 @@
   under the terms of the GNU Lesser General Public License as published by
   the Free Software Foundation, either version 3 of the License, or
   (at your option) any later version.
-
+  
   This program is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -18,9 +18,9 @@
   along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
-#ifndef _RS485_CLASS_H_INCLUDED
-#define _RS485_CLASS_H_INCLUDED
+#ifndef _MODBUS_RTU_SERVER_SRC_MODBUS_RTU_SERVER_HPP
+#define _MODBUS_RTU_SERVER_SRC_MODBUS_RTU_SERVER_HPP
 
-#include "RS485.h"
+#include "ModbusServerClass.hpp"
 
 #endif
