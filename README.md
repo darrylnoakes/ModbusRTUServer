@@ -1,4 +1,4 @@
-# ModbusRTUServerClass <!-- omit in toc -->
+# ModbusRTUServer <!-- omit in toc -->
 
 Based on `ArduinoModbus`, this library provides a stripped down and optimized Modbus server library that provides more functionality with a smaller compiled code size.
 
